@@ -1,0 +1,26 @@
+{
+  "name": "mikro-orm-v7-repros",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoneLeaf/mikro-orm-v7-repros.git"
+  },
+  "type": "module",
+  "author": "",
+  "private": "true",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/core": "^7.0.2",
+    "@mikro-orm/sqlite": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
+}
