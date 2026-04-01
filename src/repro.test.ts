@@ -104,6 +104,8 @@ test("owning side of 1:1 tpt leaf relationship fails to populate if reverse decl
   /**
     Query fails as it tries to select parent TPT Person column 'name' in the leaf Employee table:
 
+    InvalidFieldNameException: no such column: o1.name
+
       SELECT
         `o0`.*,
         `o1`.`id` AS `o1__id`,
@@ -141,6 +143,8 @@ test("reverse side of 1:1 tpt leaf relationship fails to populate", async () => 
 
   /**
     Query fails as it tries to select parent TPT Person column 'name' in the leaf Employee table:
+
+    InvalidFieldNameException: no such column: o1.name
 
       SELECT
         `o0`.*,
