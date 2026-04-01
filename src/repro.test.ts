@@ -139,6 +139,7 @@ test("relationship of tpt child entities are NOT populated when targeting abstra
   const foundPerson = await forkedEm.findOne(
     Person,
     { id: employeeId },
+    // Note: Using the option is necessary for the leaf entity Employee constructor to be used
     { populate: ["*"] },
   );
 
@@ -151,6 +152,7 @@ test("relationship of tpt child entities are NOT populated when targeting abstra
   if (!(foundPerson instanceof Employee)) {
     throw new Error();
   }
+  console.log(foundPerson.constructor.name);
 
   expect(foundPerson?.address).toEqual(
     expect.objectContaining({ city: "Springfield" }),
