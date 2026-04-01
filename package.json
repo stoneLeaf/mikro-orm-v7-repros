@@ -14,13 +14,13 @@
   "private": "true",
   "license": "ISC",
   "dependencies": {
-    "@mikro-orm/core": "^7.0.7",
-    "@mikro-orm/sqlite": "^7.0.7"
+    "@mikro-orm/core": "^7.0.8",
+    "@mikro-orm/sqlite": "^7.0.8"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "jest": "^30.3.0",
-    "ts-jest": "^29.4.6",
+    "ts-jest": "^29.4.9",
     "typescript": "^5.9.3"
   }
 }
