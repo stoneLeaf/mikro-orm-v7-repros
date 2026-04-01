@@ -48,22 +48,6 @@ beforeAll(async () => {
     debug: ["query", "query-params"],
     allowGlobalContext: true,
   });
-  await orm.schema.refresh();
-
-  const forkedEm = orm.em.fork();
-
-  const address = forkedEm.create(Address, {
-    street: "1 Main Road",
-    city: "Springfield",
-  });
-  const employee = forkedEm.create(Employee, {
-    name: "John Doe",
-    department: "Engineering",
-    address,
-  });
-  employeeId = employee.id;
-
-  await forkedEm.flush();
 });
 
 afterAll(async () => {
