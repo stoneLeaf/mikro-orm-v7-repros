@@ -57,7 +57,7 @@ beforeEach(async () => {
   await orm.schema.refresh();
 });
 
-test.only("query fails for TPT parent entity with 1:m relationship", async () => {
+test.only("query fails for TPT leaf having a TPT parent with 1:m relationship", async () => {
   orm.em.create(Employee, {
     name: "John Doe",
     department: "Engineering",
@@ -93,7 +93,7 @@ test.only("query fails for TPT parent entity with 1:m relationship", async () =>
           referencedColumnNames: [ 'id' ]
         }
    */
-  const foundEmployee = await forkedEm.findAll(Employee);
+  const foundEmployee = await forkedEm.findAll(Person);
 
   expect(foundEmployee).not.toBeFalsy();
 });
