@@ -4,6 +4,7 @@
     "moduleResolution": "nodenext",
     "target": "ESNext",
     "strict": true,
+    "rootDir": "./",
     "outDir": "dist",
     "declaration": true,
     "experimentalDecorators": true,
