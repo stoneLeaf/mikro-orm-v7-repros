@@ -14,8 +14,8 @@
   "private": "true",
   "license": "ISC",
   "dependencies": {
-    "@mikro-orm/core": "^7.0.8",
-    "@mikro-orm/sqlite": "^7.0.8"
+    "@mikro-orm/core": "^7.0.9",
+    "@mikro-orm/sqlite": "^7.0.9"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
