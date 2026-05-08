@@ -143,8 +143,7 @@ test("eager OneToOne relation should be populated when a filter is applied to th
   // When SOFT_DELETE_FILTER is applied to Person (the abstract TPT base), loading Badge
   // produces duplicate JOINs in the generated SQL: one filtered set (with
   // `deleted_at IS NULL` on the JOIN condition) and one unfiltered duplicate set.
-  // Those unfiltered duplicate JOINs trigger additional hydration queries that reset
-  // the `badge` reference on Employee back to an uninitialised proxy.
-  expect(wrap(found.badge).isInitialized()).toBe(true);
+  // Those unfiltered duplicate JOINs cause MikroORM to hydrate `badge` as null.
+  expect(found.badge).not.toBeNull();
   expect(found.badge.code).toBe("BADGE-001");
 });
